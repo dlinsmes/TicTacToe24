@@ -129,7 +129,7 @@ def ai_turn():
                 piece = "o"
                 moveRow = i
                 moveCol = j
-                board[i][j] = "o"
+                board[i][j] = piece
                 score = evaluate("ai")
                 #undo the move
                 board[i][j] = "_"
