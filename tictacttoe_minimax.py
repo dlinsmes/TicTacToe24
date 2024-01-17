@@ -126,10 +126,10 @@ def ai_turn():
     for i in range(3):
         for j in range(3):
             if board[i][j] == "_":
-                board[i][j] = "o"
+                piece = "o"
                 moveRow = i
                 moveCol = j
-                piece = "o"
+                board[i][j] = "o"
                 score = evaluate("ai")
                 #undo the move
                 board[i][j] = "_"
