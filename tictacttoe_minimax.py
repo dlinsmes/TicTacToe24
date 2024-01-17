@@ -129,6 +129,7 @@ def ai_turn():
                 board[i][j] = "o"
                 moveRow = i
                 moveCol = j
+                piece = "o"
                 score = evaluate("ai")
                 #undo the move
                 board[i][j] = "_"
@@ -151,7 +152,7 @@ def evaluate(currentPlayer):
     #base cases: the turn that just went triggers some kind of game over
     if currentPlayer == "ai" and winner():
         return 1
-    elif  currentPlayer == "other" and winner():
+    elif currentPlayer == "other" and winner():
         return -1
     elif tie():
         return 0
